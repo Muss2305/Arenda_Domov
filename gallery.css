@@ -1,0 +1,503 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Newsreader', Georgia, serif;
+  color: #171717;
+  background: #f8f8f8;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Навигация */
+.navbar {
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border-bottom: 1px solid #222;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 115px;
+  padding: 0 22px;
+  border-left: 1px solid #222;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: #f0f0f0;
+}
+
+.nav-links .btn-book {
+  background: #050505;
+  color: #fff;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Заголовок и первый экран */
+.page-title {
+  font-size: 46px;
+  font-weight: 400;
+  padding: 42px 24px 12px;
+}
+
+.gallery-hero {
+  height: 330px;
+  position: relative;
+  overflow: hidden;
+  background: #333;
+}
+
+.gallery-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.gallery-hero img {
+  height: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Общие секции */
+.views-section {
+  padding: 60px 24px 72px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.section-heading span {
+  display: block;
+  font-size: 10px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.exterior-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 920px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.photo-card img {
+  height: 270px;
+}
+
+.photo-card figcaption {
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+.bedroom {
+  width: 75%;
+}
+
+.lounge {
+  margin-top: 65px;
+}
+
+.deck {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.deck img {
+  height: 300px;
+}
+
+/* Темная секция */
+.interior-section {
+  background: #2d3040;
+  color: #fff;
+  padding: 64px 24px 70px;
+}
+
+.interior-section .section-heading {
+  max-width: 500px;
+  margin: 0 auto 38px;
+}
+
+.interior-thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+.interior-thumbnails img {
+  width: 48px;
+  height: 48px;
+}
+
+.interior-feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.interior-feature img {
+  width: 72%;
+  height: 310px;
+}
+
+.slide-button {
+  color: #fff;
+  background: transparent;
+  border: 1px solid #777987;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.feature-caption {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 12px;
+}
+
+/* Район */
+.neighborhood {
+  padding-top: 70px;
+}
+
+.neighborhood-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  max-width: 950px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.neighborhood-grid img {
+  height: 210px;
+}
+
+.neighborhood-grid img:nth-child(2) {
+  background: #e7cba9;
+  padding: 22px;
+}
+
+.last-photo {
+  height: 360px;
+}
+
+.last-photo img {
+  height: 100%;
+}
+
+/* Бронирование и подвал */
+.booking-banner {
+  min-height: 250px;
+  padding: 50px 24px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+              url("images/booking-bg.jpg") center/cover no-repeat;
+}
+
+.booking-banner span {
+  font-size: 11px;
+}
+
+.booking-banner h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 12px 0 22px;
+}
+
+.book-button {
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  border-radius: 30px;
+  padding: 11px 25px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.footer {
+  background: #050505;
+  color: #fff;
+  padding: 45px 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+}
+
+.footer-brand {
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #555;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+  display: block;
+  margin-bottom: 7px;
+  color: #ccc;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+/* Планшет */
+@media (max-width: 900px) {
+  .page-title {
+    font-size: 40px;
+  }
+
+  .gallery-hero {
+    height: 290px;
+  }
+
+  .views-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .photo-card img {
+    height: 230px;
+  }
+
+  .deck img {
+    height: 270px;
+  }
+
+  .neighborhood-grid {
+    gap: 16px;
+  }
+}
+
+/* Телефон */
+@media (max-width: 600px) {
+  .navbar {
+    height: 52px;
+    align-items: center;
+  }
+
+  .nav-logo {
+    padding: 0 16px;
+    font-size: 11px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    padding: 17px 18px;
+    border-left: 1px solid #222;
+  }
+
+  .mobile-menu summary {
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-menu-links {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #222;
+  }
+
+  .mobile-menu-links a {
+    padding: 13px 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .page-title {
+    font-size: 34px;
+    padding: 30px 16px 12px;
+  }
+
+  .gallery-hero {
+    height: 190px;
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+
+  .views-section {
+    padding: 42px 18px 48px;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .section-heading h2 {
+    font-size: 21px;
+  }
+
+  .exterior-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .photo-card,
+  .bedroom,
+  .lounge,
+  .deck {
+    width: 100%;
+    margin: 0;
+  }
+
+  .photo-card img,
+  .deck img {
+    height: 230px;
+  }
+
+  .interior-section {
+    padding: 45px 18px 50px;
+  }
+
+  .interior-section .section-heading h2 {
+    font-size: 21px;
+  }
+
+  .interior-thumbnails {
+    gap: 9px;
+    margin-bottom: 24px;
+  }
+
+  .interior-thumbnails img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .interior-feature {
+    gap: 8px;
+  }
+
+  .interior-feature img {
+    width: 75%;
+    height: 220px;
+  }
+
+  .slide-button {
+    padding: 6px 8px;
+    font-size: 9px;
+  }
+
+  .neighborhood-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .neighborhood-grid img {
+    height: 220px;
+  }
+
+  .last-photo {
+    height: 230px;
+  }
+
+  .booking-banner {
+    min-height: 210px;
+    padding: 42px 18px;
+  }
+
+  .booking-banner h2 {
+    font-size: 24px;
+  }
+
+  .footer {
+    padding: 35px 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .social-links {
+    margin-top: 12px;
+  }
+}
